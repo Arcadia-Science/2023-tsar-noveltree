@@ -36,7 +36,7 @@ echo "# Removing short (< 50 AA) proteins #"
 echo "#####################################"
 for spp in $(ls unfilt_proteins/)
 do
-    seqkit seq --threads 16 --min-len 50 unfilt_proteins/$spp > tmp 
+    seqkit seq --threads 10 --min-len 50 unfilt_proteins/$spp > tmp 
     mv tmp unfilt_proteins/$spp
 done
 
@@ -44,7 +44,7 @@ done
 echo "###############################"
 echo "# Calculating protein lengths #"
 echo "###############################"
-mkdir -p prot_lengths && parallel -j 16 < get_tsar_prot_length_cmds.txt
+mkdir -p prot_lengths && parallel -j 10 < get_tsar_prot_length_cmds.txt
 
 # Where possible, reduce isoform redundancy, keeping only the longest isoform
 # Start by determining the length of alternative isoforms
