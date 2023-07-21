@@ -1,0 +1,12 @@
+EP00331_Platyophrya_macrostoma	MMETS
+EP00451_Oxyrrhis_marina	MMETS
+EP00465_Bigelowiella_longifila	MMETS
+EP00462_Mataza_sp_D1	MMETS
+EP00823_Brevimastigomonas_motovehiculus	Trinity
+EP00475_Leptophrys_vorax	Trinity
+EP00455_Lapot_gusevi	Trinity
+EP00519_Triparma_laevis	MMETS
+EP00638_Chattonella_subsalsa	MMETS
+EP00499_Haloplacidia_sp_CaronLabIsolate	MMETS
+EP00656_Telonema_subtile	Trinity
+EP00658_Telonema_sp_P-2	Trinity
