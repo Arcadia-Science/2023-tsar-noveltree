@@ -3,15 +3,26 @@ The directory [`util-lists/`](./util-lists) contains sample/species lists that a
   - Efforts have been made to automate the process as much as possible. But, given the diversity of different sources for these data, varied and tailored approaches have been made in certain cases. 
   - Below is a description of each script herein. 
 
-## Scripts:
-### 1) `preprocess_tsar_proteomes.sh`: 
-  - Prior to running this script it is assumed a conda environment has been already been made (using `protein_preprocess_env.yml`) and is currently active. Assuming you have mamba installed, this can be accomplished using the following set of commands:
+## Note: 
+The scripts herein have only been tested on a Mac OSX working environment (Monterey: version 12.5.1). Modifications to commands may need to be made to work properly on other operating systems.
+
+## Scripts/Steps:
+### 0) Create conda environment:
+  - Prior to running the combined preprocessing script (Step 1: `preprocess_tsar_proteomes.sh`) it is assumed a conda environment has been already been made (using `protein_preprocess_env.yml`) and is currently active. 
+  - Assuming you have mamba installed, this can be accomplished using the following set of commands:
     ```
     mamba env create -n protein_preprocessing --file protein_preprocess_env.yml 
     conda activate protein_preprocessing
     ```
+  - Once the `protein_preprocessing` conda environment it active, you may proceed with the rest of the prop
+
+### 1) `preprocess_tsar_proteomes.sh`: 
   - This script conducts all stages of data pre-processing, calling the constinuent scripts in appropriate order, and carrying out any necessary cleanup of output directory structure. 
   - Data are downloaded from our bucket on S3 as part of this process. 
+  - This is the only script that you need to call directly, such as with the following command:
+    ```
+      bash ./preprocess_tsar_proteomes.sh
+    ```
 
 ### 2) `get_tsar_prot_length_cmds.txt`:
   - This is a text file called within `preprocess_tsar_proteomes.sh` that is a list of commands that calculates the length of each protein in each unfiltered dataset. This protein length information is used downstream.
