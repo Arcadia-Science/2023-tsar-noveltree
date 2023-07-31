@@ -37,10 +37,12 @@ The scripts herein have only been tested on a Mac OSX working environment (Monte
 
 ### 5) `cdhit_proteomes.sh`:
   - This script performs a number of functions, but in general finalizes all proteomes for downstream analyses. Again, 10 threads are used by default, but this can be modified within the script. Steps include....
-    - Running CD-HIT (global similarity threshold (-c 0.90) of 90%) on all proteomes for which we have reduced down to the longest isoform/protein product per-gene. 
-    - Running CD-HIT (global similarity threshold (-c 0.90) of 90%) on all proteomes for which the original source was a transcriptome, but we were unable to parse 
+    - Running CD-HIT with global similarity threshold (-c 0.90) of 90% on:
+      - all proteomes for which we have reduced down to the longest isoform/protein product per-gene. 
+      - all proteomes for which the original source was a transcriptome, but we were unable to parse 
 alternative isoforms.
-    - Running CD-HIT (global similarity threshold (-c 0.95) of 95%) on all non-reference (i.e. UniProt Reference) proteomes for which the original source was a 
+    - Running CD-HIT with global similarity threshold (-c 0.95) of 95% on:
+      - all non-reference (i.e. UniProt Reference) proteomes for which the original source was a 
 genome, and we could not ensure we had only a single protein per-gene. 
     - Removal of any sequence < 50 AA long for all proteomes, including reference proteomes.
   - To determine what type of filtering to apply to each species, `util_lists/non_reduced_prots_to_cdhit.txt` and `util_lists/non_ref_genome_prots_to_reduce.txt` are referenced. 
