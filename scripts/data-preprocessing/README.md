@@ -1,5 +1,5 @@
 # Code in this directory is used to pre-process TSAR proteomes for analysis with PhylOrthology
-The directory `util-lists/` contains sample/species lists that are used by different scripts, indicating species that should be processed in slightly different manners
+The directory [`util-lists/`](./util-lists) contains sample/species lists that are used by different scripts, indicating species that should be processed in slightly different manners
   - Efforts have been made to automate the process as much as possible. But, given the diversity of different sources for these data, varied and tailored approaches have been made in certiain cases. 
   - Below is a description of each script herein. 
 
