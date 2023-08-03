@@ -17,7 +17,7 @@ The scripts herein have only been tested on a Mac OSX working environment (Monte
   - Once the `protein_preprocessing` conda environment it active, you may proceed with the rest of the prop
 
 ### 1) `preprocess_tsar_proteomes.sh`: 
-  - This script conducts all stages of data pre-processing, calling the constinuent scripts in appropriate order, and carrying out any necessary cleanup of output directory structure. 
+  - This script conducts all stages of data pre-processing, calling the constituent scripts in appropriate order, and carrying out any necessary cleanup of output directory structure. 
   - Data are downloaded from our bucket on S3 as part of this process. 
   - This is the only script that you need to call directly, such as with the following command:
     ```
