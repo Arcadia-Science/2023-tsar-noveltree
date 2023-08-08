@@ -309,6 +309,49 @@ get_ofinder_summaries <-
     }
   }
 
+# Function to summarize gene family content, both with respect to number of 
+# species included in each gene family, and the per-species mean copy number
+summ_genefam_composition <- 
+  function(results_dir = NULL, show_plots = F, out_dir = "summarized-results/orthofinder/"){
+    # Read in the gene copy number and species count for each gene family
+    res <- read.table(paste0(results_dir, "filtered_orthogroups/all_ogs_counts.csv"), sep = ",", header = T)
+    
+    # Plot the mean species gene copy number against the number of species 
+    # in each gene family
+    copynum_v_numspp <- 
+      ggplot(data = res, aes(y = mean_copy_num, x = num_spp)) + 
+      geom_point(position = position_jitter(width = 0.2),
+                 alpha = 0.25, size = 0.75) + 
+      theme_classic(base_size = 14) + 
+      scale_y_log10() + 
+      annotation_logticks(sides = 'l') + 
+      xlab("# Species in gene family") + 
+      ylab("Mean per-species\ngene copy #")
+    
+    # And plot the histogram of species counts across all gene families
+    fam_sppcount_dist <- 
+      ggplot(data = res, aes(x = num_spp)) + 
+      geom_histogram(fill = 'lightgrey', color = 'black') + 
+      theme_classic(base_size = 14) + 
+      scale_y_log10() + 
+      annotation_logticks(sides = 'l') + 
+      xlab("# Species in gene family") + 
+      ylab("# Gene families")
+    
+    # Combine them
+    genefam_composition_plt <- 
+      suppressMessages(plot_grid(copynum_v_numspp, fam_sppcount_dist, ncol = 2))
+    
+    # print the plots if that is requested
+    if(show_plots == T){print(genefam_composition_plt)}
+    
+    # And save
+    ggsave(genefam_composition_plt, filename = paste0(out_dir, "genefamily_compostion.png"), 
+           height = 6, width = 12, dpi = 600)
+    ggsave(genefam_composition_plt, filename = paste0(out_dir, "genefamily_compostion.pdf"), 
+           height = 6, width = 12)
+  }
+
 # Summarize and plot orthogroup statistics per species
 get_per_spp_ofinder_stats <-
   function(tree = NULL, tree_fpath = NULL,

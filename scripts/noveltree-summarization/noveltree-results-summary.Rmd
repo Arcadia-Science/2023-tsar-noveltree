@@ -136,9 +136,9 @@ ___
 Now, let's go ahead and summarize the results from OrthoFinder. To start, this will just include some high-level summaries - number of species per gene family, gene copy number per gene family, etc. This will create and populate a new directory within the `NovelTree` directory, `summarized-results`. Within this directory, we will store OrthoFinder-specific results within a subdirectory, intuitively named `orthofinder`.
 
 ```{r Gene Family Summary Stats, fig.asp = .95, class.source = 'fold-show'}
-# Reformat orthofinder gene family summaries, saving both
-# reformatted summaries, and their corresponding plots
-get_ofinder_summaries(results_dir = result_directory, show_plots = T)
+# Summarize gene family content, both with respect to number of species 
+# included in each gene family, and the per-species mean copy number
+summ_genefam_composition(results_dir = result_directory, show_plots = T)
 
 # And get orthogroup summary statistics per species
 per_spp_of_stats <-
@@ -281,7 +281,7 @@ ylimit <- c(0, round(max(rates_per_og[,-1]) + 0.005, 2))
 dup_loss_rate_plt <-
   ggplot(data = rates_per_og,
          aes(fill = transfer, x = duplication, y = loss)) +
-  geom_point(pch = 21, size = 3) +
+  geom_point(pch = 21, size = 3, alpha = 0.5) +
   scale_fill_distiller(type = 'seq', palette = 3, name = 'Transfer Rate') +
   theme_classic(base_size = 14) +
   theme(legend.position = 'top', legend.justification = 'left',
@@ -294,7 +294,7 @@ dup_loss_rate_plt <-
 dup_transf_rate_plt <-
   ggplot(data = rates_per_og,
          aes(fill = loss, x = duplication, y = transfer)) +
-  geom_point(pch = 21, size = 3) +
+  geom_point(pch = 21, size = 3, alpha = 0.5) +
   scale_fill_distiller(type = 'seq', palette = 7, name = 'Loss Rate') +
   theme_classic(base_size = 14) +
   theme(legend.position = 'top', legend.justification = 'left',
@@ -307,7 +307,7 @@ dup_transf_rate_plt <-
 transf_loss_rate_plt <-
   ggplot(data = rates_per_og,
          aes(fill = duplication, x = transfer, y = loss)) +
-  geom_point(pch = 21, size = 3) +
+  geom_point(pch = 21, size = 3, alpha = 0.5) +
   scale_fill_distiller(type = 'seq', palette = 2, name = 'Duplication Rate') +
   theme_classic(base_size = 14) +
   theme(legend.position = 'top', legend.justification = 'left',
@@ -544,7 +544,7 @@ ylimit <- c(0, round(max(rates_per_og[,-1]) + 0.005, 2))
 dup_loss_rate_plt <-
   ggplot(data = rates_per_og,
          aes(fill = transfer, x = duplication, y = loss)) +
-  geom_point(pch = 21, size = 3) +
+  geom_point(pch = 21, size = 3, alpha = 0.5) +
   scale_fill_distiller(type = 'seq', palette = 3, name = 'Transfer Rate') +
   theme_classic(base_size = 14) +
   theme(legend.position = 'top', legend.justification = 'left',
@@ -557,7 +557,7 @@ dup_loss_rate_plt <-
 dup_transf_rate_plt <-
   ggplot(data = rates_per_og,
          aes(fill = loss, x = duplication, y = transfer)) +
-  geom_point(pch = 21, size = 3) +
+  geom_point(pch = 21, size = 3, alpha = 0.5) +
   scale_fill_distiller(type = 'seq', palette = 7, name = 'Loss Rate') +
   theme_classic(base_size = 14) +
   theme(legend.position = 'top', legend.justification = 'left',
@@ -570,7 +570,7 @@ dup_transf_rate_plt <-
 transf_loss_rate_plt <-
   ggplot(data = rates_per_og,
          aes(fill = duplication, x = transfer, y = loss)) +
-  geom_point(pch = 21, size = 3) +
+  geom_point(pch = 21, size = 3, alpha = 0.5) +
   scale_fill_distiller(type = 'seq', palette = 2, name = 'Duplication Rate') +
   theme_classic(base_size = 14) +
   theme(legend.position = 'top', legend.justification = 'left',
