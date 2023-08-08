@@ -135,7 +135,7 @@ ___
 ## Gene Family Summaries {.tabset}
 Now, let's go ahead and summarize the results from OrthoFinder. To start, this will just include some high-level summaries - number of species per gene family, gene copy number per gene family, etc. This will create and populate a new directory within the `NovelTree` directory, `summarized-results`. Within this directory, we will store OrthoFinder-specific results within a subdirectory, intuitively named `orthofinder`.
 
-```{r Gene Family Summary Stats, fig.asp = .9, class.source = 'fold-show'}
+```{r Gene Family Summary Stats, fig.asp = .95, class.source = 'fold-show'}
 # Reformat orthofinder gene family summaries, saving both
 # reformatted summaries, and their corresponding plots
 get_ofinder_summaries(results_dir = result_directory, show_plots = T)
