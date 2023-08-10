@@ -8,7 +8,7 @@
 ################################################################################
 
 # This script carries out all preprocessing of amino acid sequences used in
-# phylogenomic inference of TSAR eukaryotes with the PhylOrthology workflow.
+# phylogenomic inference of TSAR eukaryotes with the NovelTree workflow.
 
 # Download data from S3:
 echo "#################################"
