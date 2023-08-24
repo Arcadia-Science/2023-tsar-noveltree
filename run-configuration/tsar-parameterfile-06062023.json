@@ -1,0 +1,22 @@
+{
+	"tree_method": "fasttree",
+	"outgroups": "Telonema_subtile,Telonema_sp_P-2",
+	"msa_trimmer": "none",
+	"rooted_spp_tree": "none",
+	"min_num_seq_per_og": 4,
+	"min_num_grp_per_og": 1,
+	"aligner": "witch",
+	"max_cpus": "5000",
+	"max_memory": "30000.GB",
+	"download_annots": "all",
+	"max_copy_num_gene_trees": 50,
+	"max_time": "2400.h",
+	"min_prop_spp_for_spptree": 0.75,
+	"mcl_inflation": "1.25,2.0,2.75,3.5,4.25,5.0,5.75,6.5,7.25,8.0,8.75,9.5",
+	"tree_model_pmsf": "none",
+	"outdir": "s3://arcadia-phylogenomic-libraries/phylorthology/results-tsar-eukaryotes-06062023/",
+	"input": "s3://arcadia-phylogenomic-libraries/phylorthology/run-configurations/tsar-eukaryotes/tsar-samplesheet-06062023.csv",
+	"min_num_spp_per_og": 3,
+	"min_ungapped_length": 30,
+	"max_copy_num_spp_tree": 20
+}
