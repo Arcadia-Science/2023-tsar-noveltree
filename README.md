@@ -16,4 +16,6 @@ The following repository contains the supplementary code and an example walkthro
   - Additionally, this includes an [R Markdown file](./scripts/noveltree-results-summary.Rmd) and resultant [interactive HTML]((./scripts/noveltree-results-summary.html)) that may downloaded and opened in your browser that walks through and describes the use of these summarization scripts, as well as provides some example visualizations. 
   - In the future, we intend to further develop these summarization scripts, building them into an R package that will more readily facilate both exploratative and quantitative analysis of any `NovelTree` run. 
 
+## Contributions and Support
 
+If you would like to contribute to this pipeline, please see [Arcadia Science's contribution guidelines](https://github.com/Arcadia-Science/arcadia-software-handbook/blob/main/guides-and-standards/guide-credit-for-contributions.md).
