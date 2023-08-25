@@ -1,4 +1,11 @@
 # Summarization of NovelTree outputs
+To download our publically hosted NovelTree workflow outputs and generate an interactive summary of them, you may run the bash script `summarize-zenodo-workflow-outputs.sh` within this directory as follows:
+```
+bash summarize-zenodo-workflow-outputs.sh
+```
+
+For more detail about the scripts contained herein, see below:
+
 ## Scripts
 Within this directory, we provide several scripts that contain functions that are useful in summarizing the results produced by a run of NovelTree. Specifically, within the present directory, we provide:
   1. `noveltree_summary_functions.R`:  
