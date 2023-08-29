@@ -1,5 +1,5 @@
 # 2023-tsar-noveltree
-The following repository contains the supplementary code and an example walkthrough of how results of the analysis were summarized for our pub describing NovelTree [DOI HERE].  
+The following repository contains the supplementary code and an example walkthrough of how results of the analysis were summarized for [our pub describing NovelTree](https://doi.org/10.57844/arcadia-z08x-v798).  
 
 ## Contents
 ### 1) `run-configuration/`  
@@ -15,6 +15,10 @@ The following repository contains the supplementary code and an example walkthro
   - This directory contains the scripts used to summarize the `NovelTree` workflow outputs into more user-friendly formats.  
   - Additionally, this includes an [R Markdown file](./scripts/noveltree-results-summary.Rmd) and resultant [interactive HTML]((./scripts/noveltree-results-summary.html)) that may downloaded and opened in your browser that walks through and describes the use of these summarization scripts, as well as provides some example visualizations. 
   - In the future, we intend to further develop these summarization scripts, building them into an R package that will more readily facilate both exploratative and quantitative analysis of any `NovelTree` run. 
+
+---
+
+# Feedback, contributions, and reuse
 
 We try to be as open as possible with our work and make all of our code both available and usable. 
 We love receiving feedback at any level, through comments on our pubs or Twitter and issues or pull requests here on GitHub.
