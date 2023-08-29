@@ -1,5 +1,5 @@
 # Nexflow run configurations
-Within this directory we provide the nextflow run configurations used to conduct analyses for the pub associated with this repository. 
+Within this directory we provide the Nextflow run configurations used to conduct analyses for the pub associated with this repository. 
 
 ## This includes:
   1) `tsar-parameterfile-06062023.json`: The parameterfile used when running NovelTree on the full dataset of 36 species of TSAR eukaryotes.  
