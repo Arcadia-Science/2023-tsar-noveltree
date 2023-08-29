@@ -39,7 +39,7 @@ suppressPackageStartupMessages(
 source('./arcadia-color-gradients.R')
 
 # Specify where the workflow outputs are stored
-result_directory <- '../../../../Projects/2023-tsar-noveltree/results-tsar-eukaryotes-06062023/'
+result_directory <- 'results-tsar-eukaryotes-06062023/'
 
 # And where summarized results should be saved. 
 dir.create('./summarized-results', showWarnings = F)

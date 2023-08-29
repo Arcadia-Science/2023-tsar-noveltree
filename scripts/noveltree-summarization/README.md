@@ -7,13 +7,14 @@ bash summarize-zenodo-workflow-outputs.sh
 For more detail about the scripts contained herein, see below:
 
 ## Scripts
-Within this directory, we provide several scripts that contain functions that are useful in summarizing the results produced by a run of NovelTree. Specifically, within the present directory, we provide:
+Within this directory, we provide several scripts that contain functions that are useful in summarizing the results produced by a run of NovelTree. 
+Specifically, within the present directory, we provide:
   1. `noveltree_summary_functions.R`:  
-      + This script contains R functions that facilitate the collation, summarization, and visualization of the many outputs of NovelTree. An example of how these may be used is provided in the R-Markdown file and associated HTML that provides a detailed walkthough of its application.  
+      + This script contains R functions that facilitate the collation, summarization, and visualization of the many outputs of NovelTree. An example of how these may be used is provided in the R Markdown file and associated HTML that provides a detailed walkthough of its application.  
   2. `noveltree-results-summary.Rmd`:
-      + As described above, this R-Markdown provides a detailed walkthrough of how the functions in the R script above may be used by the user to summarize results, and to both conduct exploratory analyses, and to facilitate more explicit downstream analyses.  
+      + As described above, this R Markdown provides a detailed walkthrough of how the functions in the R script above may be used by the user to summarize results, and to both conduct exploratory analyses, and to facilitate more explicit downstream analyses.  
   3. `noveltree-results-summary.html`:  
-      + This is an interactive HTML document produced by the R-Markdown file above that provides users with a walkthough on how to summarize the outputs of NovelTree, complete with example visualizations.  
+      + This is an interactive HTML document produced by the R Markdown file above that provides users with a walkthough on how to summarize the outputs of NovelTree, complete with example visualizations.  
   4. `arcadia-color-gradients.R`:
       + This is a short R-script that contains definitions for several color pallettes used in the generation of figures presented in our pub and in the HTML file described above.
 
@@ -31,3 +32,4 @@ Within the `summarized-results/` subdirectory, we provide the summarized workflo
       + This directory contains the summarized results from inference of gene family evolutionary dynamics with GeneRax under the per-family model. See walkthrough for a detailed description.  
   7. `summarized-results/generax-per-species`:  
       + This directory contains the summarized results from inference of gene family evolutionary dynamics with GeneRax under the per-species model. See walkthrough for a detailed description.  
+
