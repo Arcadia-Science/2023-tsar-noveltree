@@ -2,7 +2,7 @@
 Within this directory we provide the Nextflow run configurations used to conduct analyses for [the pub associated with this repository](https://doi.org/10.57844/arcadia-z08x-v798). 
 
 ## This includes:
-  1) `tsar-parameterfile-06062023.json`: The parameterfile used when running NovelTree on the full dataset of 36 species of TSAR eukaryotes.  
+  1) `tsar-params-06062023.json`: The parameter file used when running NovelTree on the full dataset of 36 species of TSAR eukaryotes.  
   2) `tsar-samplesheet-06062023.csv`: The corresopnding samplesheet.  
   3) `tsar-samplesheet-zenodo.csv`: A supplemental samplesheet, not used in analyses for the pub, but replacing Amazon s3 URIs linking to each species' fasta file with URLs for the correspoding data hosted on Zenodo.
 
